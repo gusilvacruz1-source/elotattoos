@@ -712,7 +712,8 @@
    girado passa da borda e, sem isso, empurra a largura do documento e
    cria scroll lateral. Recortado, ele ainda parece sair pela beirada —
    que é justamente como sticker colado se comporta. */
-.sobre, .estilos, .galeria, .artes, .depos, .faq, .cta{ overflow: hidden; }
+.sobre, .estilos, .galeria, .artes, .depos, .faq, .cta,
+.etapas, .cuidados{ overflow: hidden; }
 
 .sticker{
   position: absolute;
@@ -743,4 +744,55 @@
   .stk--depos  { width: 112px; left: 1%;   top: 5%; opacity: .7; }
   .stk--faq    { width: 124px; right: 1%;  top: 4%;  opacity: .75; }
   .stk--cta    { width: 116px; left: 2%;   bottom: 3%; }
+}
+
+
+/* =====================================================================
+   SELOS  ·  arte preta sobre branco, entra como máscara
+   Diferente dos stickers de olho: estas são preto puro, então podem ser
+   pintadas com a cor da seção em vez de virem como imagem colada.
+   ===================================================================== */
+.selo{
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  background: currentColor;
+  -webkit-mask: var(--m) center / contain no-repeat;
+          mask: var(--m) center / contain no-repeat;
+}
+
+.selo--lirio{                                  /* lírio, junto dos estilos */
+  --m: url(../img/lirio.png);
+  width: 300px; aspect-ratio: 436/399;
+  left: 1%; bottom: 5%;
+  transform: rotate(-9deg);
+  color: var(--taupe);
+}
+.selo--boca{                                   /* boca, no "Como funciona" */
+  --m: url(../img/boca.png);
+  width: 254px; aspect-ratio: 411/338;
+  right: 3%; bottom: 4%;
+  transform: rotate(7deg);
+  color: var(--ink);
+  opacity: .28;
+}
+.selo--flores{                                 /* florais a pincel, nos cuidados */
+  --m: url(../img/flores.png);
+  width: 236px; aspect-ratio: 440/704;
+  left: 1%; bottom: 2%;
+  transform: rotate(5deg);
+  color: var(--taupe);
+}
+
+/* Faixa da textura líquida: leva o claro de volta ao escuro do CTA. */
+.faixa-liquida{
+  height: clamp(110px, 16vh, 190px);
+  background: var(--ink) url(../img/liquido.jpg) center / cover no-repeat;
+}
+
+@media (max-width: 768px){
+  .selo--lirio { width: 148px; left: auto; right: 2%; bottom: 2%; }
+  .selo--boca  { width: 130px; right: 2%;  bottom: 2%; opacity: .22; }
+  .selo--flores{ width: 116px; left: 1%;   bottom: 1%; }
+  .faixa-liquida{ height: clamp(90px, 13vh, 130px); }
 }

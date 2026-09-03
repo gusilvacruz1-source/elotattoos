@@ -201,3 +201,31 @@ com a da tela nos três.
 **Para trocar:** suba a imagem nova em `assets/img/originais/` pelo GitHub e
 me avise — é assim que estas chegaram, já que o anexo pelo chat não estava
 funcionando nesta sessão.
+
+
+---
+
+## Selos e faixa — `lirio.png`, `boca.png`, `flores.png`, `liquido.jpg`
+
+Segunda leva de arte, somada aos stickers (não substitui nenhum).
+
+| Arquivo | Onde | Tipo |
+|---|---|---|
+| `lirio.png` | Estilos, junto do bloco "Florais" | máscara, 300 px |
+| `boca.png` | Como funciona, margem direita | máscara, 254 px |
+| `flores.png` | Segurança e cuidados, margem esquerda | máscara, 236 px |
+| `liquido.jpg` | faixa cheia entre o FAQ e o CTA | imagem de fundo |
+
+**Por que máscara e não imagem:** as três primeiras são preto puro sobre
+branco, então funcionam como os rabiscos — pintadas com `currentColor` e
+acompanhando a cor da seção. A textura líquida não: ela é foto de borda a
+borda, sem contorno para recortar, e virou faixa de transição do claro de
+volta ao escuro do CTA. Foi girada 90° para ficar horizontal.
+
+**Peso:** as máscaras foram reduzidas para 440 px de largura e o canal alfa
+posterizado em 4 níveis. Como a arte é meio-tom (quase binária), isso não
+muda a aparência e derruba muito o arquivo: **83 KB viraram 14 KB por peça**.
+As quatro somam 112 KB.
+
+Elas passam por trás do texto, não por cima — o texto continua legível
+mesmo onde a arte cruza a coluna.
