@@ -151,3 +151,53 @@ o arquivo entra em `assets/img/` e a classe `.rab-NN` no CSS aponta para ele.
 **Licença:** a folha de origem trazia marca de "free_font" e um QR code, o que
 indica que veio de um pacote de assets. Vale conferir os termos de uso antes
 de publicar comercialmente.
+
+
+---
+
+## Stickers — `olho-*.png`, `onda-1.png`, `brilho-1.png`
+
+Colados por cima do site, com giro e tamanho próprios: 4 olhos em meio-tom,
+uma onda marmorizada e um trio de brilhos. Saíram das três imagens que você
+subiu em `assets/img/originais/`, recortados com o fundo branco removido por
+preenchimento a partir da borda (não por "clarear o que é claro" — senão o
+creme do globo do olho sumia junto).
+
+Cada um foi isolado do vizinho antes do recorte, e quantizado: **777 KB de
+recorte bruto viraram 121 KB**.
+
+Diferente dos rabiscos, estes **não** são máscara CSS: a textura de meio-tom
+e o creme do globo são o desenho. Pintar de uma cor só destruiria a peça.
+
+### Onde estão
+
+| Sticker | Seção | Tamanho no desktop |
+|---|---|---|
+| `brilho-1` | hero, à esquerda sobre o vídeo | 132 px |
+| `olho-1` | Sobre, embaixo à esquerda | 244 px |
+| `olho-3` | Estilos, no vão da diagonal | 208 px |
+| `brilho-1` | Galeria, perto dos filtros | 108 px |
+| `onda-1` | Artes, saindo pela direita | 172 px |
+| `onda-1` | Depoimentos, margem esquerda | 232 px |
+| `olho-2` | FAQ, no vazio à direita | 268 px |
+| `olho-4` | CTA, embaixo à esquerda | 226 px |
+
+No celular três somem (hero, galeria e artes) e os outros encolhem: coluna
+estreita com sticker grande vira sujeira em cima do conteúdo.
+
+### As três regras que eles obedecem
+
+1. **`pointer-events: none`** — nunca roubam clique de botão ou link.
+2. **`z-index: 0`, com o conteúdo em `z-index: 1`** — ficam acima do fundo da
+   seção e abaixo do texto. Não cobrem palavra nenhuma.
+3. **A seção recorta no próprio limite** (`overflow: hidden`) — sticker girado
+   passa da borda e, sem isso, empurra a largura do documento e cria scroll
+   lateral. Recortado, ainda parece sair pela beirada.
+
+Verificado em 1440, 768 e 360 px: nenhum captura clique, nenhum bloqueia
+botão, nenhum fica acima do texto, e a largura do documento bate exatamente
+com a da tela nos três.
+
+**Para trocar:** suba a imagem nova em `assets/img/originais/` pelo GitHub e
+me avise — é assim que estas chegaram, já que o anexo pelo chat não estava
+funcionando nesta sessão.

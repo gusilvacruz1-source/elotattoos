@@ -699,3 +699,48 @@
   .etapas__grid{ grid-template-columns: 1fr; }
   .depo{ max-width: 100%; }
 }
+
+
+/* =====================================================================
+   STICKERS
+   Recortes colados por cima, cada um com posição e giro próprios.
+   Ficam acima do fundo da seção e ABAIXO do texto (o .site-container
+   sobe para z-index 1), então nunca cobrem palavra nem botão. E são
+   pointer-events:none, para não roubar clique de link nenhum.
+   ===================================================================== */
+/* As seções que recebem sticker recortam no próprio limite: o sticker
+   girado passa da borda e, sem isso, empurra a largura do documento e
+   cria scroll lateral. Recortado, ele ainda parece sair pela beirada —
+   que é justamente como sticker colado se comporta. */
+.sobre, .estilos, .galeria, .artes, .depos, .faq, .cta{ overflow: hidden; }
+
+.sticker{
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  height: auto;
+}
+.section > .site-container{ position: relative; z-index: 1; }
+
+/* Cada um no seu canto. As porcentagens mantêm tudo dentro da seção,
+   e o overflow do body corta qualquer sobra — nada gera scroll lateral. */
+.stk--hero    { width: 132px; left: 4%;  top: 16%;  transform: rotate(-8deg);  opacity: .85; }
+.stk--sobre   { width: 244px; left: 2%;  bottom: 6%; transform: rotate(11deg); }
+.stk--estilos { width: 208px; right: 3%; top: 41%;  transform: rotate(-13deg); }
+.stk--galeria { width: 108px; right: 6%; top: 9%;   transform: rotate(16deg); }
+.stk--artes   { width: 172px; right: 1%; bottom: 4%; transform: rotate(9deg);  opacity: .9; }
+.stk--depos   { width: 232px; left: 3%;  top: 12%;  transform: rotate(-6deg); }
+.stk--faq     { width: 268px; right: 7%; top: 34%;  transform: rotate(14deg); }
+.stk--cta     { width: 226px; left: 5%;  bottom: 8%; transform: rotate(-11deg); opacity: .9; }
+
+/* No celular tudo encolhe e alguns saem: a coluna é estreita e sticker
+   grande ali vira sujeira em cima do conteúdo. */
+@media (max-width: 768px){
+  .stk--hero, .stk--galeria, .stk--artes{ display: none; }
+  .stk--sobre  { width: 128px; left: auto; right: 2%; bottom: 2%; }
+  .stk--estilos{ width: 104px; right: 2%;  top: 33%; }
+  .stk--depos  { width: 112px; left: 1%;   top: 5%; opacity: .7; }
+  .stk--faq    { width: 124px; right: 1%;  top: 4%;  opacity: .75; }
+  .stk--cta    { width: 116px; left: 2%;   bottom: 3%; }
+}

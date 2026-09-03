@@ -336,6 +336,19 @@
       });
     });
 
+    /* 9.4b Stickers: assentam como se tivessem acabado de ser colados. */
+    document.querySelectorAll('.sticker').forEach(function (st) {
+      var giro = gsap.getProperty(st, 'rotation') || 0;
+      gsap.from(st, {
+        scale: 0.82,
+        rotation: giro - 10,
+        opacity: 0,
+        duration: 0.7,
+        ease: 'back.out(1.6)',
+        scrollTrigger: { trigger: st.parentElement, start: 'top 75%', once: true }
+      });
+    });
+
     /* 9.5 Rabiscos: varredura da esquerda para a direita, como se a mão
        estivesse passando o marcador agora. O CSS deixa o rabisco visível;
        quem esconde antes de animar é este gsap.from. */
