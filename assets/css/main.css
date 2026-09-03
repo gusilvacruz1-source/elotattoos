@@ -277,14 +277,37 @@ html[data-nav="dark"] .grain{ opacity: .035; }
 @keyframes draw{ to{ width: 100%; } }
 .preloader.is-done{ opacity: 0; pointer-events: none; transition: opacity .5s var(--ease); }
 
-/* ---------- 11. RABISCOS (SVG traçado) ---------- */
-.scribble{
-  position: absolute;
+/* ---------- 11. RABISCOS ---------- */
+/* As formas vêm da folha de marcador da cliente, recortadas uma a uma.
+   Entram como máscara CSS, não como <img>: assim o desenho é pintado com
+   currentColor e acompanha a cor de cada seção (taupe no escuro, tinta no
+   claro), do mesmo jeito que um SVG faria. */
+.rab{
+  --rab: none;
+  display: block;
   pointer-events: none;
-  color: var(--taupe);
-  overflow: visible;
+  background: currentColor;
+  -webkit-mask: var(--rab) center / contain no-repeat;
+          mask: var(--rab) center / contain no-repeat;
 }
-.scribble path{ fill: none; stroke-linecap: round; }
+.rab--pos{ position: absolute; }
+.rab--inline{
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--taupe);
+}
+
+/* Uma classe por forma. O caminho é relativo a esta folha de estilo. */
+.rab-09{ --rab: url(../img/rabisco-09.png); }   /* estrela riscada  136x127 */
+.rab-10{ --rab: url(../img/rabisco-10.png); }   /* rasura reta      190x35  */
+.rab-13{ --rab: url(../img/rabisco-13.png); }   /* ziguezague       200x31  */
+.rab-17{ --rab: url(../img/rabisco-17.png); }   /* estrela 8 pontas 146x118 */
+.rab-18{ --rab: url(../img/rabisco-18.png); }   /* elipse           197x71  */
+.rab-20{ --rab: url(../img/rabisco-20.png); }   /* seta             167x74  */
+.rab-27{ --rab: url(../img/rabisco-27.png); }   /* rabisco solto    167x93  */
+
+/* O elemento que o rabisco marca vira a referência de posição. */
+.rab-alvo{ position: relative; display: inline-block; }
 
 /* ---------- 12. UTILITÁRIOS ---------- */
 .sr-only{

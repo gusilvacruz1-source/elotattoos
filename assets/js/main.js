@@ -336,15 +336,16 @@
       });
     });
 
-    /* 9.5 Rabiscos: stroke-dashoffset de 100% a 0 */
-    document.querySelectorAll('.scribble path').forEach(function (p) {
-      var comp = p.getTotalLength();
-      gsap.set(p, { strokeDasharray: comp, strokeDashoffset: comp });
-      gsap.to(p, {
-        strokeDashoffset: 0,
-        duration: 1,
+    /* 9.5 Rabiscos: varredura da esquerda para a direita, como se a mão
+       estivesse passando o marcador agora. O CSS deixa o rabisco visível;
+       quem esconde antes de animar é este gsap.from. */
+    document.querySelectorAll('.rab').forEach(function (r) {
+      if (r.closest('.marquee')) return;        /* as da faixa já andam sozinhas */
+      gsap.from(r, {
+        clipPath: 'inset(0 100% 0 0)',
+        duration: 0.7,
         ease: 'power2.inOut',
-        scrollTrigger: { trigger: p.closest('svg').parentElement, start: 'top 78%', once: true }
+        scrollTrigger: { trigger: r.parentElement, start: 'top 82%', once: true }
       });
     });
   }

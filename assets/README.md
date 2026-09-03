@@ -112,3 +112,42 @@ Dá para servir dois formatos (um `.mp4` para todo mundo e o `.mov` original
 só para o Safari), mas isso não resolve o peso: 25 MB no hero derruba o
 carregamento no 4G, que é como a maioria das clientes vai abrir o site.
 Melhor exportar leve.
+
+
+---
+
+## Rabiscos de marcador — `rabisco-NN.png`
+
+As marcas à mão do site (elipse, seta, rasura, estrelas) saíram da folha de
+rabiscos que você mandou. Cada forma foi recortada individualmente da imagem
+e isolada do vizinho, e entra no site como **máscara CSS**, não como imagem:
+
+```css
+.rab{ background: currentColor;
+      mask: var(--rab) center/contain no-repeat; }
+```
+
+Por isso o rabisco é pintado com a cor da seção — taupe sobre o fundo escuro,
+tinta sobre o claro — em vez de ser um PNG preto colado por cima.
+
+### Onde cada um está
+
+| Arquivo | Onde | Por quê |
+|---|---|---|
+| `rabisco-18` (elipse) | em volta de "só seu", no Sobre | marca a ideia central do texto |
+| `rabisco-18` (elipse) | em volta do "1" nos números | destaca "1 atendimento por vez" |
+| `rabisco-20` (seta) | entre a etapa 03 e a 04 | mostra a sequência |
+| `rabisco-10` (rasura) | sob "Chamar no WhatsApp" | sublinha o botão principal |
+| `rabisco-10` (rasura) | sobre "Arte 07" e "Arte 08" | riscado = já reservada |
+| `rabisco-13` (ziguezague) | sob "Trabalhos" | sublinha o título da galeria |
+| `rabisco-17` (estrela) | separadores da faixa rolante | substitui o asterisco tipográfico |
+| `rabisco-09` (estrela riscada) | ao lado de "flash" | acento na seção de artes |
+| `rabisco-27` (rabisco solto) | junto do @ no rodapé | assinatura |
+
+**Ficaram de fora 15 formas** da folha original (bolas emaranhadas, blocos
+preenchidos, setas grossas). Estão guardadas e é rápido trocar qualquer uma:
+o arquivo entra em `assets/img/` e a classe `.rab-NN` no CSS aponta para ele.
+
+**Licença:** a folha de origem trazia marca de "free_font" e um QR code, o que
+indica que veio de um pacote de assets. Vale conferir os termos de uso antes
+de publicar comercialmente.
