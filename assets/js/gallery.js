@@ -35,8 +35,12 @@
   function filtrar(categoria) {
     var antes = medir();
 
+    /* data-cat aceita mais de uma categoria, separadas por espaco.
+       "cicatrizadas" e um estado, nao um estilo: uma manga floral ja
+       curada e as duas coisas ao mesmo tempo. */
     fotos.forEach(function (f) {
-      f.hidden = !(categoria === 'todas' || f.getAttribute('data-cat') === categoria);
+      var cats = (f.getAttribute('data-cat') || '').split(/\s+/);
+      f.hidden = !(categoria === 'todas' || cats.indexOf(categoria) !== -1);
     });
 
     /* Categoria ainda sem foto: diz isso, em vez de deixar um vão mudo. */

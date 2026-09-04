@@ -40,18 +40,23 @@ no atributo `data-angulos` do botão, em JSON.
 
 | Peça | Categoria | Ângulos | Arquivos |
 |---|---|---|---|
-| Manga de lírios | `florais` | 5 fotos + 1 vídeo | `lirios-1…5.webp`, `lirios-video.mp4` |
+| Manga de lírios | `florais cicatrizadas` | 5 fotos + 1 vídeo | `lirios-1…5.webp`, `lirios-video.mp4` |
 | Ramo com peônia e libélula | `fineline` | 6 fotos | `ramo-1…6.webp` |
 | Peônias e borboletas | `florais` | 1 foto | `peonias-1.webp` |
 | Flores na clavícula | `florais` | 1 foto | `clavicula-1.webp` |
 | Libélula e "Hope" | `autorais` | 3 fotos + 1 vídeo | `hope-1…3.webp`, `hope-video.mp4` |
 | Bússola com lírios | `autorais` | 1 foto | `bussola-1.webp` |
 
-**O filtro `cicatrizadas` está vazio.** Nenhuma dessas fotos é de trabalho
-cicatrizado — são todas de tatuagem recém-feita, e eu não ia marcar uma
-como cicatrizada sem ser. Quando chegar foto de pele já curada, é só pôr
-`data-cat="cicatrizadas"` no cartão dela; enquanto isso o filtro mostra uma
-mensagem de "ainda não tem foto aqui".
+**`data-cat` aceita mais de uma categoria, separadas por espaço.**
+"Cicatrizadas" é um estado, não um estilo: a manga de lírios é floral *e*
+já está curada, então aparece nos dois filtros. As outras três categorias
+(florais, fineline, autorais) continuam se excluindo na prática, mas nada
+impede uma peça de estar em duas.
+
+Hoje só a manga de lírios está marcada como cicatrizada — foi a cliente
+quem confirmou. As outras cinco continuam sem essa marca porque ninguém
+disse que estão curadas, e eu não marco por conta própria. Se o filtro
+ficar sem nenhuma peça, ele mostra uma mensagem em vez de um vão mudo.
 
 **Para acrescentar uma peça nova:** copie um `<button class="shot">`
 inteiro, troque `data-titulo`, `data-cat`, `data-ratio` (largura ÷ altura
