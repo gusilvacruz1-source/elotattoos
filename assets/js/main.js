@@ -9,13 +9,13 @@
 
   /* ---------------------------------------------------------------
      0. CONFIGURAÇÃO DO WHATSAPP
-     CONFIRMAR: preencha `numero` com DDD + número, só dígitos, com o
-     55 na frente (ex.: '5542988084236'). Enquanto estiver vazio, todos
-     os botões usam o link curto da bio do Instagram — que funciona,
-     mas NÃO aceita mensagem pré-preenchida.
+     O número é o do WhatsApp Business dela (Tattoo Elo). Com ele
+     preenchido, todo botão abre a conversa com a mensagem já escrita, e
+     a reserva de arte cita o nome da peça. Se ficar vazio, o site cai
+     no link curto da bio, que funciona mas não aceita mensagem pronta.
      --------------------------------------------------------------- */
   var WA = {
-    numero: '',
+    numero: '5542999005602',                 /* +55 42 99900-5602 */
     atalho: 'https://wa.me/message/GSIOOPZYE2W7G1',
     msgPadrao: 'Oi, Eloize! Vi o site e queria falar sobre uma tatuagem.',
     msgArte: 'Oi, Eloize! Vi o site e queria reservar a arte "{arte}".'

@@ -47,19 +47,18 @@ propósito, para não passar batido. Nada foi inventado.
 ### Dados do estúdio
 1. ~~Cidade/UF~~ — ✅ **Imbaú, PR**, já aplicado no hero, no `<title>`,
    no CTA, no rodapé e no JSON-LD.
-2. **Bairro** do atendimento — CTA final e rodapé mostram só a cidade.
-3. **Dias e horários** de atendimento — CTA final, rodapé e JSON-LD.
-4. **Endereço completo, CEP e telefone** — só para o JSON-LD (SEO local).
+2. ~~Endereço~~ — ✅ **Avenida Ivo Jangada, 242, Imbaú/PR, 84250-000**,
+   do perfil comercial dela no WhatsApp. Está no CTA, no rodapé e no JSON-LD.
+3. **Dias da semana** em que atende. O perfil dela diz "somente com hora
+   marcada", que já está no site, mas os dias não apareciam.
+4. ~~Telefone~~ — ✅ **+55 42 99900-5602**.
 5. **Domínio final** — hoje está `elotattoos.com.br` como exemplo na
    canonical e no Open Graph.
 
-### WhatsApp (importante)
-6. **Número com DDD** — preencher `WA.numero` no topo de `assets/js/main.js`,
-   no formato `'5542988084236'` (55 + DDD + número, só dígitos).
-   Enquanto estiver vazio, todos os botões usam o link curto da bio
-   (`wa.me/message/GSIOOPZYE2W7G1`), que funciona **mas não abre a conversa
-   com a mensagem pronta**. A reserva de arte só cita o nome da peça
-   depois que o número for preenchido.
+### WhatsApp
+6. ~~Número com DDD~~ — ✅ **resolvido.** `WA.numero` está com
+   `5542999005602`. Os 11 botões abrem a conversa com a mensagem já
+   escrita, e cada card de arte cita o nome da peça na mensagem.
 
 ### Conteúdo
 7. ~~Ano em que começou a tatuar~~ — ✅ a cliente dispensou. A menção ao ano
