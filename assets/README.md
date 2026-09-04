@@ -18,12 +18,12 @@ Não precisa mexer no código.
 
 | Arquivo | Uso | Dimensão sugerida |
 |---|---|---|
-| `hero-eloize.webp` | retrato da Eloize, vertical (aparece em arco no topo) | 1200×1600 |
+| `hero-eloize.webp` | ✅ **já feito** — retrato da Eloize, no arco do topo | 900×1200 |
 | `sobre-estudio.webp` | ambiente do estúdio | 1000×1250 |
 | `estilo-fineline.webp` | exemplo de fine line | 800×1100 |
 | `estilo-floral.webp` | exemplo de floral | 800×1100 |
 | `estilo-autoral.webp` | exemplo de arte autoral | 800×1100 |
-| `galeria-01.webp` … `galeria-12.webp` | portfólio (12 fotos) | mínimo 1000px no lado maior |
+| fotos da galeria | ✅ **já feitas** — 17 fotos, 6 peças (ver abaixo) | mínimo 880px no lado maior |
 | `arte-01.webp` … `arte-08.webp` | desenhos disponíveis, fundo claro | 900×900 |
 | `cta-estudio.webp` | fachada ou detalhe do espaço, vertical | 1000×1400 |
 | `hero-fundo.mp4` | ✅ **já feito** — vídeo de fundo da seção do hero | 592×1206 |
@@ -33,19 +33,31 @@ Não precisa mexer no código.
 
 ## Categorias da galeria
 
-Cada foto do portfólio tem uma categoria no HTML (`data-cat`), que alimenta
-os filtros. A distribuição atual é:
+A galeria funciona **uma peça por cartão**: cada tatuagem é um card só, e
+os outros ângulos dela abrem no lightbox pelas setas — como anúncio de
+imóvel, em que você clica na casa e vai vendo os cômodos. Os ângulos ficam
+no atributo `data-angulos` do botão, em JSON.
 
-| Arquivo | Categoria |
-|---|---|
-| galeria-01, 04, 08, 12 | `florais` |
-| galeria-02, 06, 10 | `fineline` |
-| galeria-03, 07, 11 | `autorais` |
-| galeria-05, 09 | `cicatrizadas` |
+| Peça | Categoria | Ângulos | Arquivos |
+|---|---|---|---|
+| Manga de lírios | `florais` | 5 fotos + 1 vídeo | `lirios-1…5.webp`, `lirios-video.mp4` |
+| Ramo com peônia e libélula | `fineline` | 6 fotos | `ramo-1…6.webp` |
+| Peônias e borboletas | `florais` | 1 foto | `peonias-1.webp` |
+| Flores na clavícula | `florais` | 1 foto | `clavicula-1.webp` |
+| Libélula e "Hope" | `autorais` | 3 fotos + 1 vídeo | `hope-1…3.webp`, `hope-video.mp4` |
+| Bússola com lírios | `autorais` | 1 foto | `bussola-1.webp` |
 
-Se a foto que você tiver for de outra categoria, é só trocar o `data-cat`
-no `index.html`. O texto do `alt` também precisa ser reescrito para
-descrever a tatuagem de verdade (desenho + local do corpo).
+**O filtro `cicatrizadas` está vazio.** Nenhuma dessas fotos é de trabalho
+cicatrizado — são todas de tatuagem recém-feita, e eu não ia marcar uma
+como cicatrizada sem ser. Quando chegar foto de pele já curada, é só pôr
+`data-cat="cicatrizadas"` no cartão dela; enquanto isso o filtro mostra uma
+mensagem de "ainda não tem foto aqui".
+
+**Para acrescentar uma peça nova:** copie um `<button class="shot">`
+inteiro, troque `data-titulo`, `data-cat`, `data-ratio` (largura ÷ altura
+da foto de capa) e a lista `data-angulos`. O número no cantinho do cartão
+(`.shot__angulos`) tem que bater com a quantidade de ângulos. O `alt` de
+cada ângulo descreve a tatuagem de verdade — desenho + local do corpo.
 
 
 ---
@@ -56,8 +68,9 @@ O hero tem duas camadas de imagem, e elas são coisas diferentes:
 
 - **Fundo da seção inteira:** o vídeo do decalque (`hero-fundo.mp4`),
   em preto e branco, sob um véu escuro que segura a leitura do título.
-- **Arco por cima:** o **retrato da Eloize** (`hero-eloize.webp`), que
-  ainda não chegou — hoje aparece o placeholder.
+- **Arco por cima:** o **retrato da Eloize** (`hero-eloize.webp`, 900×1200),
+  recortado da foto que ela mandou — a cúpula do arco passa por cima das
+  letras do título.
 
 O vídeo veio de um `.mov` de 8,3 MB gravado no iPhone (HEVC, 6,1 s, 60 fps,
 com áudio) e foi convertido aqui para:
