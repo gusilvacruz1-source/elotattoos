@@ -276,8 +276,8 @@
 .numeros{ padding-block: clamp(48px, 7vh, 84px); border-top: 1px solid var(--hairline); }
 .numeros__row{
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));   /* minmax(0,…) impede que
-     um valor longo (ex.: [CONFIRMAR]) estoure a coluna e crie scroll lateral */
+  grid-template-columns: repeat(3, minmax(0, 1fr));   /* minmax(0,…) impede que
+     um valor longo estoure a coluna e crie scroll lateral */
   gap: var(--gap);
 }
 .stat{
@@ -674,7 +674,7 @@
   .sobre__media{ grid-column: 1 / span 12; margin-top: 36px; aspect-ratio: 4 / 5; }
 
   .numeros__row{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px var(--gap); }
-  .stat:nth-child(3){ border-left: 0; padding-left: 0; }
+  .stat:nth-child(3){ border-left: 0; padding-left: 0; }   /* 3ª cai para a linha de baixo */
 
   .estilos{ background: linear-gradient(to bottom, var(--ink) 0 22%, var(--paper) 22% 100%); }
   .estilo--1, .estilo--2, .estilo--3{ grid-column: 1 / span 12; margin-top: 0; }

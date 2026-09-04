@@ -229,3 +229,31 @@ As quatro somam 112 KB.
 
 Elas passam por trás do texto, não por cima — o texto continua legível
 mesmo onde a arte cruza a coluna.
+
+
+---
+
+## Fotos da galeria — as 5 primeiras
+
+Chegaram cinco fotos reais de trabalhos da Eloize, convertidas de JPEG de
+3024×4032 para WebP de 900×1200 (288 KB no total). Elas ficam nos topos das
+três colunas do masonry, então a primeira coisa que se vê na galeria é
+trabalho de verdade, não placeholder.
+
+| Vaga | Foto | Categoria |
+|---|---|---|
+| `galeria-01` | lírios no ombro e braço | florais |
+| `galeria-02` | ramo de folhas fine line, com peônia e libélula | fine line |
+| `galeria-05` | peônias e borboletas no ombro | florais |
+| `galeria-06` | flores miúdas e peônias na clavícula | florais |
+| `galeria-09` | libélula sobre a palavra "Hope" | autorais |
+
+Cada uma tem `alt` descrevendo o desenho e o local do corpo, como o
+briefing pede.
+
+**Os JPEG originais não foram versionados** — são ~3 MB cada e ficariam no
+histórico do Git para sempre. Se precisar deles de novo, peça à cliente.
+
+**Ainda não há nenhuma foto de "cicatrizadas".** Duas vagas estão marcadas
+com essa categoria esperando foto de trabalho já curado — não dá para usar
+foto de tatuagem recém-feita ali, seria informação errada para quem filtra.

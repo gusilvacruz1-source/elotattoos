@@ -62,9 +62,11 @@ propósito, para não passar batido. Nada foi inventado.
    depois que o número for preenchido.
 
 ### Conteúdo
-7. **Ano em que começou a tatuar** — texto do "Sobre".
-8. **Anos tatuando** e **tatuagens feitas** — dois dos quatro números.
-   (Os outros dois já estão certos: 5.9K do Instagram e 1 atendimento por vez.)
+7. ~~Ano em que começou a tatuar~~ — ✅ a cliente dispensou. A menção ao ano
+   saiu do texto do "Sobre".
+8. ~~Números~~ — ✅ **mais de 200 tatuagens feitas**, confirmado. A faixa
+   passou de quatro para três: 200+, 5.9K do Instagram e 1 atendimento por
+   vez. A estatística de "anos tatuando" foi removida.
 9. **Política de sinal** — etapa 02 do "Como funciona".
 10. **Normas da vigilância sanitária** e **marcas de tinta/agulha** —
     seção de segurança.
@@ -80,9 +82,10 @@ propósito, para não passar batido. Nada foi inventado.
     visual — **isso precisa ser corrigido com a informação real**.
 
 ### Fotos e vídeo
-15. **Faltam 27 arquivos de imagem** — ver `assets/README.md` com os nomes e
+15. **Faltam 22 arquivos de imagem** — ver `assets/README.md` com os nomes e
     as dimensões. O mais importante é o **`hero-eloize.webp`: o retrato da
-    Eloize**, que é o que vai dentro do arco do hero.
+    Eloize**, que é o que vai dentro do arco do hero. A galeria já tem
+    **5 fotos reais** de 12; faltam 7.
 16. ~~Vídeo de fundo do hero~~ — ✅ **pronto.** `hero-fundo.mp4`, 717 KB,
     H.264, convertido do `.mov` do iPhone. O poster `hero-fundo.webp` saiu
     de um frame dele. É o fundo da seção; **não** é o que vai no arco.
