@@ -250,9 +250,9 @@ ela é **um** cartão com 5 ângulos.
 
 | Peça | Ângulos | Categoria | Arquivos |
 |---|---|---|---|
-| Manga de lírios | 5 | florais | `lirios-1..5.webp` |
+| Manga de lírios | 5 fotos + 1 vídeo | florais | `lirios-1..5.webp`, `lirios-video.mp4` |
 | Ramo com peônia e libélula | 6 | fine line | `ramo-1..6.webp` |
-| Libélula e "Hope" | 3 | autorais | `hope-1..3.webp` |
+| Libélula e "Hope" | 3 fotos + 1 vídeo | autorais | `hope-1..3.webp`, `hope-video.mp4` |
 | Peônias e borboletas | 1 | florais | `peonias-1.webp` |
 | Flores na clavícula | 1 | florais | `clavicula-1.webp` |
 | Bússola com lírios | 1 | autorais | `bussola-1.webp` |
@@ -283,3 +283,44 @@ categoria". Todas as fotos recebidas são de tatuagem recém-feita.
 **Mais peças distintas.** São 6 peças para quem já fez mais de 200 tatuagens.
 Ângulos novos das mesmas peças agora são bem-vindos (entram como ângulo, não
 ocupam vaga), mas o que faz a galeria crescer é **peça diferente**.
+
+
+---
+
+## Vídeos dentro da galeria
+
+Os vídeos **não** ganharam seção própria: eles entram como mais um ângulo da
+peça que mostram. Quem abre a manga de lírios passa pelas fotos e chega no
+vídeo dela em movimento. Uma seção separada repetiria as mesmas tatuagens.
+
+No JSON de ângulos, o vídeo é só um item com `tipo`:
+
+```json
+{"tipo":"video","src":"assets/img/lirios-video.mp4",
+ "poster":"assets/img/lirios-video-poster.webp","alt":"…","w":720,"h":1280}
+```
+
+Ele fica em **segundo lugar** no array — uma seta a partir da capa, fácil de
+achar — e nunca em primeiro, porque a capa da grade é sempre uma imagem.
+O selo do cartão ganha um triângulo de play quando a peça tem vídeo.
+
+### A conversão
+
+Os originais eram **4K HDR de iPhone**: HEVC 10 bits, HLG, 60 fps, 27 Mbit/s,
+20 MB cada. Isso não toca fora do Safari e não caberia numa página.
+
+| | antes | depois |
+|---|---|---|
+| Codec | HEVC 10 bits | H.264 Main, 8 bits |
+| Cor | HLG HDR (bt2020) | SDR bt709, com tonemap |
+| Tamanho | 3840×2160 · 60 fps | 720×1280 · 30 fps |
+| Peso | 20 MB | **0,7 e 0,8 MB** |
+
+O **tonemap importa**: converter HDR sem ele deixa a imagem lavada e sem
+contraste. A cadeia usada foi `zscale` linear → `tonemap=hable` → `bt709`.
+
+Os vídeos vão **sem áudio**, em loop, com controles, e tocam sozinhos ao
+abrir. Em `prefers-reduced-motion` ficam no poster, com o play à mão.
+
+**Para trocar ou acrescentar:** mande o arquivo e eu converto — não precisa
+vir em formato nenhum específico.

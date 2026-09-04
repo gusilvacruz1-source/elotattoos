@@ -387,6 +387,18 @@
   transition: background-color .4s var(--ease);
 }
 .shot:hover .shot__angulos{ background: var(--ink); }
+/* Peça que tem vídeo mostra o triângulo junto do número. */
+.shot__angulos--video{ gap: 6px; }
+.shot__angulos--video svg{ width: 9px; height: 9px; }
+
+/* O vídeo ocupa o mesmo espaço da foto dentro da lightbox. */
+.lightbox__holder video{
+  max-height: 78svh;
+  width: auto;
+  border-radius: var(--radius);
+  display: block;
+  background: var(--ink-soft);
+}
 
 .galeria__vazio{
   padding-block: clamp(40px, 8vh, 88px);

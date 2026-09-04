@@ -94,12 +94,34 @@
     var a = angulos[i];
     if (!a) return;
 
-    var img = new Image();
-    img.src = a.src;
-    img.alt = a.alt;
-    img.width = a.w; img.height = a.h;
+    var peca;
+    if (a.tipo === 'video') {
+      peca = document.createElement('video');
+      peca.src = a.src;
+      peca.poster = a.poster;
+      peca.width = a.w; peca.height = a.h;
+      peca.controls = true;
+      peca.loop = true;
+      peca.muted = true;              /* os vídeos já vão sem áudio */
+      peca.playsInline = true;
+      peca.setAttribute('aria-label', a.alt);
+      /* Movimento reduzido: fica no poster, com o controle à mão. */
+      if (!reduzido) {
+        peca.autoplay = true;
+        peca.addEventListener('canplay', function () {
+          var t = peca.play();
+          if (t && t.catch) t.catch(function () {});
+        }, { once: true });
+      }
+    } else {
+      peca = new Image();
+      peca.src = a.src;
+      peca.alt = a.alt;
+      peca.width = a.w; peca.height = a.h;
+    }
     holder.innerHTML = '';
-    holder.appendChild(img);
+    holder.appendChild(peca);
+    var img = peca;
 
     cap.textContent = angulos.length > 1
       ? (i + 1) + ' de ' + angulos.length
@@ -122,8 +144,11 @@
 
     /* o próximo já vai baixando, para a seta responder na hora */
     if (angulos.length > 1) {
-      var prox = new Image();
-      prox.src = angulos[(i + 1) % angulos.length].src;
+      var seguinte = angulos[(i + 1) % angulos.length];
+      if (seguinte.tipo !== 'video') {            /* vídeo não se pré-carrega */
+        var prox = new Image();
+        prox.src = seguinte.src;
+      }
     }
 
     if (temGsap && !reduzido) {
