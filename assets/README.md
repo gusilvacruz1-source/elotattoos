@@ -276,14 +276,27 @@ trabalho com semanas ou meses.
 são da mesma peça (a libélula com "Hope"), de ângulos diferentes. Falta uma
 peça autoral **diferente**.
 
-### Uma observação sobre variedade
+### Quantas peças distintas a galeria mostra
 
-Das 10 fotos no ar, várias são da **mesma tatuagem** vista de ângulos
-diferentes: a manga de lírios aparece em 5 vagas (`01`, `04`, `08`, `10`,
-`12`) e a libélula com "Hope" em 2 (`09`, `07`). Espalhei entre as três
-colunas para não ficarem lado a lado, mas na prática a galeria mostra
-cerca de **4 peças distintas**, não 10.
+| Peça | Vagas |
+|---|---|
+| manga de lírios | `01` `04` `10` |
+| ramo fine line com peônia e borboleta | `02` `08` `12` |
+| libélula com "Hope" | `07` `09` |
+| peônias e borboletas | `05` |
+| flores na clavícula | `06` |
 
-Para um portfólio de quem já fez mais de 200 tatuagens, vale pedir fotos de
-**trabalhos diferentes** em vez de mais ângulos dos mesmos — é o que faz a
-galeria parecer o tamanho real do trabalho dela.
+**5 peças em 10 vagas.** Antes eram 4, com a manga de lírios sozinha
+ocupando 5 vagas — o segundo lote de fotos permitiu reequilibrar.
+
+Para um portfólio de quem já fez mais de 200 tatuagens, o que faz a galeria
+parecer o tamanho real do trabalho dela é foto de **peça diferente**, não
+mais ângulo da mesma. Duas fotos enviadas eram idênticas às que já estavam
+no ar (conferido por hash perceptual) e foram descartadas.
+
+### Atenção antes de publicar de verdade
+
+As duas vagas vazias aparecem nos filtros: clicar em **"Cicatrizadas"**
+hoje mostra só um retângulo de placeholder, e **"Autorais"** mostra duas
+fotos e um placeholder. Em rascunho tudo bem; antes de considerar o site
+pronto, ou essas vagas recebem foto ou saem do HTML.
