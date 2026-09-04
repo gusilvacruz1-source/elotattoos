@@ -233,70 +233,53 @@ mesmo onde a arte cruza a coluna.
 
 ---
 
-## Fotos da galeria — as 5 primeiras
 
-Chegaram cinco fotos reais de trabalhos da Eloize, convertidas de JPEG de
-3024×4032 para WebP de 900×1200 (288 KB no total). Elas ficam nos topos das
-três colunas do masonry, então a primeira coisa que se vê na galeria é
-trabalho de verdade, não placeholder.
-
-| Vaga | Foto | Categoria |
-|---|---|---|
-| `galeria-01` | lírios no ombro e braço | florais |
-| `galeria-02` | ramo de folhas fine line, com peônia e libélula | fine line |
-| `galeria-05` | peônias e borboletas no ombro | florais |
-| `galeria-06` | flores miúdas e peônias na clavícula | florais |
-| `galeria-09` | libélula sobre a palavra "Hope" | autorais |
-
-Cada uma tem `alt` descrevendo o desenho e o local do corpo, como o
-briefing pede.
-
-**Os JPEG originais não foram versionados** — são ~3 MB cada e ficariam no
-histórico do Git para sempre. Se precisar deles de novo, peça à cliente.
-
-**Ainda não há nenhuma foto de "cicatrizadas".** Duas vagas estão marcadas
-com essa categoria esperando foto de trabalho já curado — não dá para usar
-foto de tatuagem recém-feita ali, seria informação errada para quem filtra.
 
 
 ---
 
-## Galeria — o que ainda falta, e por quê
+## Galeria — uma peça por cartão, vários ângulos por peça
 
-10 das 12 vagas estão preenchidas com foto real. As duas que sobram não são
-"qualquer foto": cada uma tem um motivo.
+A grade **não** é uma lista de fotos: cada cartão é **uma tatuagem**. Clicando,
+as setas passam pelos ângulos daquela mesma peça — como numa ficha de imóvel,
+em que se navega pelos cômodos da mesma casa.
 
-**`galeria-03` — categoria "cicatrizadas".** Nenhuma das fotos enviadas até
-agora é de trabalho curado; são todas de tatuagem recém-feita. Pôr uma
-delas aqui seria mentira para quem clica no filtro "Cicatrizadas"
-esperando ver como a peça fica depois da cura. Precisa de foto de um
-trabalho com semanas ou meses.
+Isso resolveu o problema que os lotes anteriores criaram: antes, cada ângulo
+ocupava uma vaga, e a manga de lírios sozinha comia metade da galeria. Agora
+ela é **um** cartão com 5 ângulos.
 
-**`galeria-11` — categoria "autorais".** As duas fotos autorais recebidas
-são da mesma peça (a libélula com "Hope"), de ângulos diferentes. Falta uma
-peça autoral **diferente**.
+| Peça | Ângulos | Categoria | Arquivos |
+|---|---|---|---|
+| Manga de lírios | 5 | florais | `lirios-1..5.webp` |
+| Ramo com peônia e libélula | 6 | fine line | `ramo-1..6.webp` |
+| Libélula e "Hope" | 3 | autorais | `hope-1..3.webp` |
+| Peônias e borboletas | 1 | florais | `peonias-1.webp` |
+| Flores na clavícula | 1 | florais | `clavicula-1.webp` |
+| Bússola com lírios | 1 | autorais | `bussola-1.webp` |
 
-### Quantas peças distintas a galeria mostra
+### Como adicionar
 
-| Peça | Vagas |
-|---|---|
-| manga de lírios | `01` `04` `10` |
-| ramo fine line com peônia e borboleta | `02` `08` `12` |
-| libélula com "Hope" | `07` `09` |
-| peônias e borboletas | `05` |
-| flores na clavícula | `06` |
+Os ângulos ficam num atributo `data-angulos` no botão da peça, em JSON:
 
-**5 peças em 10 vagas.** Antes eram 4, com a manga de lírios sozinha
-ocupando 5 vagas — o segundo lote de fotos permitiu reequilibrar.
+```html
+<button class="shot" data-cat="florais" data-ratio="0.75"
+        data-titulo="Manga de lírios"
+        data-angulos='[{"src":"assets/img/lirios-1.webp","alt":"…","w":880,"h":1173}, …]'>
+```
 
-Para um portfólio de quem já fez mais de 200 tatuagens, o que faz a galeria
-parecer o tamanho real do trabalho dela é foto de **peça diferente**, não
-mais ângulo da mesma. Duas fotos enviadas eram idênticas às que já estavam
-no ar (conferido por hash perceptual) e foram descartadas.
+A primeira do array é a capa que aparece na grade. O selo com o número no
+canto do cartão é gerado a partir do tamanho do array — sem ele ninguém
+descobre que há mais ângulos.
 
-### Atenção antes de publicar de verdade
+**Só as 6 capas entram no HTML.** Os outros 11 ângulos são baixados quando
+alguém abre a peça, então a página carrega ~350 KB de galeria em vez de 1 MB.
 
-As duas vagas vazias aparecem nos filtros: clicar em **"Cicatrizadas"**
-hoje mostra só um retângulo de placeholder, e **"Autorais"** mostra duas
-fotos e um placeholder. Em rascunho tudo bem; antes de considerar o site
-pronto, ou essas vagas recebem foto ou saem do HTML.
+### O que ainda falta
+
+**Fotos de trabalho cicatrizado.** O filtro "Cicatrizadas" existe e hoje não
+tem nenhuma peça — clicar nele mostra o aviso "ainda não há fotos nesta
+categoria". Todas as fotos recebidas são de tatuagem recém-feita.
+
+**Mais peças distintas.** São 6 peças para quem já fez mais de 200 tatuagens.
+Ângulos novos das mesmas peças agora são bem-vindos (entram como ângulo, não
+ocupam vaga), mas o que faz a galeria crescer é **peça diferente**.

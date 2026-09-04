@@ -82,11 +82,10 @@ propósito, para não passar batido. Nada foi inventado.
     visual — **isso precisa ser corrigido com a informação real**.
 
 ### Fotos e vídeo
-15. **Faltam 17 arquivos de imagem** — ver `assets/README.md` com os nomes e
-    as dimensões. O mais importante é o **`hero-eloize.webp`: o retrato da
-    Eloize**, que é o que vai dentro do arco do hero. A galeria já tem
-    **10 fotos reais** de 12; faltam 2, e as duas precisam de conteúdo
-    específico (ver `assets/README.md`).
+15. **Faltam 10 arquivos de imagem** — ver `assets/README.md`. O mais
+    importante é o **`hero-eloize.webp`: o retrato da Eloize**, que é o que
+    vai dentro do arco do hero. A galeria tem **6 peças e 17 fotos**; o que
+    falta ali é foto de **trabalho cicatrizado** e **peças diferentes**.
 16. ~~Vídeo de fundo do hero~~ — ✅ **pronto.** `hero-fundo.mp4`, 717 KB,
     H.264, convertido do `.mov` do iPhone. O poster `hero-fundo.webp` saiu
     de um frame dele. É o fundo da seção; **não** é o que vai no arco.
