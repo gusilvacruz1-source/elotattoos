@@ -428,6 +428,8 @@
 .arte{ display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
 .media--flash{ width: 100%; aspect-ratio: 1 / 1; border-radius: 16px; }
 .media--flash img{ filter: grayscale(1) contrast(1.04); }
+/* Hoje nenhuma arte esta reservada. Quando alguma for, e so por
+   is-reservada no <article> e trocar o texto do badge. */
 .arte.is-reservada .media--flash{ opacity: .4; }
 /* Rasura no nome do que já foi reservado — a marca diz o que o texto diz. */
 .rab--rasura{
@@ -485,7 +487,7 @@
   align-items: start;
 }
 .cuidados__grid > div:first-child{ grid-column: 1 / span 5; }
-.cuidados__acc{ grid-column: 7 / span 6; }
+.cuidados__lista{ grid-column: 7 / span 6; }
 .cuidados .h2{ margin-block: 14px clamp(28px, 4vh, 44px); }
 
 .pontos{ display: flex; flex-direction: column; }
@@ -495,12 +497,11 @@
   gap: 16px;
   padding-block: 18px;
   border-top: 1px solid var(--hairline-d);
-  max-width: 44ch;
+  max-width: 52ch;
 }
 .ponto:last-child{ border-bottom: 1px solid var(--hairline-d); }
 .ponto__tick{ width: 18px; height: 1px; background: var(--taupe); margin-top: 15px; flex: none; }
 
-.cuidados__acc .h3{ margin-bottom: 18px; }
 
 /* Accordion (reaproveitado no FAQ) */
 .acc__item{ border-top: 1px solid var(--hairline-d); }
@@ -531,37 +532,11 @@
 .acc__panel{ overflow: hidden; height: 0; }
 .acc__panel p{ padding-bottom: 24px; color: var(--muted-dark); max-width: 52ch; }
 
-/* =============== 12 · DEPOIMENTOS =============== */
-.depos .site-container{ display: flex; flex-direction: column; align-items: center; text-align: center; }
-.depos .nota-confirmar{ margin-bottom: clamp(40px, 6vh, 72px); }
-.depo{
-  max-width: 24ch;
-  padding-block: clamp(28px, 5vh, 56px);
-}
-.depo p{
-  font-family: var(--font-display);
-  font-size: clamp(1.35rem, 2.6vw, 2rem);
-  line-height: 1.34;
-  letter-spacing: -0.01em;
-  max-width: none;
-}
-.depo cite{
-  display: block;
-  margin-top: 18px;
-  font-family: var(--font-ui);
-  font-style: normal;
-  font-weight: 500;
-  font-size: var(--fs-micro);
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: var(--muted-dark);
-}
-
-/* =============== 13 · FAQ =============== */
+/* =============== 12 · FAQ =============== */
 .faq .h2{ margin-block: 14px clamp(32px, 5vh, 56px); }
 .acc--faq{ max-width: 720px; }
 
-/* =============== 14 · CTA FINAL =============== */
+/* =============== 13 · CTA FINAL =============== */
 .cta__grid{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -585,7 +560,7 @@
 }
 .cta__infos{ display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 8px; }
 
-/* =============== 15 · RODAPÉ =============== */
+/* =============== 14 · RODAPÉ =============== */
 .footer{ padding-top: clamp(72px, 10vh, 128px); overflow: hidden; }
 .footer__cols{
   display: grid;
@@ -715,7 +690,7 @@
   .rab--seta{ display: none; }
 
   .cuidados__grid > div:first-child{ grid-column: 1 / span 12; }
-  .cuidados__acc{ grid-column: 1 / span 12; margin-top: 40px; }
+  .cuidados__lista{ grid-column: 1 / span 12; margin-top: 8px; }
 
   .cta__text{ grid-column: 1 / span 12; }
   .cta__media{ grid-column: 1 / span 12; margin-top: 44px; aspect-ratio: 4 / 5; }
@@ -765,7 +740,6 @@
 @media (max-width: 480px){
   .artes__grid{ grid-template-columns: 1fr; }
   .etapas__grid{ grid-template-columns: 1fr; }
-  .depo{ max-width: 100%; }
 }
 
 
@@ -780,7 +754,7 @@
    girado passa da borda e, sem isso, empurra a largura do documento e
    cria scroll lateral. Recortado, ele ainda parece sair pela beirada —
    que é justamente como sticker colado se comporta. */
-.sobre, .estilos, .galeria, .artes, .depos, .faq, .cta,
+.sobre, .estilos, .galeria, .artes, .faq, .cta,
 .etapas, .cuidados{ overflow: hidden; }
 
 .sticker{
@@ -799,7 +773,6 @@
 .stk--estilos { width: 208px; right: 3%; top: 41%;  transform: rotate(-13deg); }
 .stk--galeria { width: 108px; right: 6%; top: 9%;   transform: rotate(16deg); }
 .stk--artes   { width: 172px; right: 1%; bottom: 4%; transform: rotate(9deg);  opacity: .9; }
-.stk--depos   { width: 232px; left: 3%;  top: 12%;  transform: rotate(-6deg); }
 .stk--faq     { width: 268px; right: 7%; top: 34%;  transform: rotate(14deg); }
 .stk--cta     { width: 226px; left: 5%;  bottom: 8%; transform: rotate(-11deg); opacity: .9; }
 
@@ -809,7 +782,6 @@
   .stk--hero, .stk--galeria, .stk--artes{ display: none; }
   .stk--sobre  { width: 128px; left: auto; right: 2%; bottom: 2%; }
   .stk--estilos{ width: 104px; right: 2%;  top: 33%; }
-  .stk--depos  { width: 112px; left: 1%;   top: 5%; opacity: .7; }
   .stk--faq    { width: 124px; right: 1%;  top: 4%;  opacity: .75; }
   .stk--cta    { width: 116px; left: 2%;   bottom: 3%; }
 }

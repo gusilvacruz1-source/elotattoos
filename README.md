@@ -69,28 +69,33 @@ propósito, para não passar batido. Nada foi inventado.
 9. **Política de sinal** — etapa 02 do "Como funciona".
 10. **Normas da vigilância sanitária** e **marcas de tinta/agulha** —
     seção de segurança.
-11. **Protocolo de cuidados**: primeiras 24h, como higienizar, prazo de
-    cicatrização e política de retoque.
-12. **Três depoimentos reais** de clientes (frase + primeiro nome + região
-    do corpo). Hoje estão como placeholder.
+11. ~~Protocolo de cuidados~~ — ✅ **a cliente mandou tirar.** O bloco
+    "Depois da sessão" saiu da seção de segurança inteiro. Se ela quiser
+    o protocolo dela no ar depois, é reabrir um acordeão como o do FAQ.
+12. ~~Depoimentos~~ — ✅ **a cliente mandou tirar.** A seção inteira saiu.
+    O adesivo de onda que morava lá continua no site, em outra seção.
 13. **Respostas do FAQ**: atende homens (na voz dela), acompanhante,
     cover-up/cobertura de cicatriz, formas de pagamento.
-14. **Artes disponíveis**: nome, tamanho em cm e status (disponível ou
-    reservada) de cada uma das 8 peças. Hoje estão como "Arte 01…08";
-    as duas últimas aparecem como reservadas só para mostrar o estado
-    visual — **isso precisa ser corrigido com a informação real**.
+14. **Artes disponíveis**: nome e tamanho em cm de cada uma das 8 peças.
+    Hoje estão como "Arte 01…08". O status já está resolvido: a cliente
+    disse que **nenhuma está reservada**, então as oito aparecem como
+    disponíveis, com botão de WhatsApp. A regra `.arte.is-reservada`
+    continua no CSS para quando alguma for.
+15. ~~Dias de atendimento~~ — ✅ **a cliente mandou tirar.** No lugar
+    ficou "somente com hora marcada", que é o que o perfil comercial dela
+    já diz. O `openingHoursSpecification` segue fora do JSON-LD.
 
 ### Fotos e vídeo
-15. ~~Retrato da Eloize~~ — ✅ **pronto.** `hero-eloize.webp`, 900×1200,
+16. ~~Retrato da Eloize~~ — ✅ **pronto.** `hero-eloize.webp`, 900×1200,
     45 KB, recortado da foto que a cliente mandou. É o que aparece dentro
     do arco do hero, por cima do vídeo.
-16. **Faltam 14 arquivos de imagem** — ver `assets/README.md`: as **8 artes
+17. **Faltam 14 arquivos de imagem** — ver `assets/README.md`: as **8 artes
     disponíveis**, as **3 fotos de estilo**, o **ambiente do estúdio**, a
     **foto do CTA** e a **`og-image.jpg`**. A galeria tem **6 peças e 17
     fotos**; o que falta ali é foto de **trabalho cicatrizado** (o filtro
     "Cicatrizadas" está vazio hoje) e **peças diferentes** — são 6 peças
     para mais de 200 tatuagens.
-17. ~~Vídeo de fundo do hero~~ — ✅ **pronto.** `hero-fundo.mp4`, 717 KB,
+18. ~~Vídeo de fundo do hero~~ — ✅ **pronto.** `hero-fundo.mp4`, 717 KB,
     H.264, convertido do `.mov` do iPhone. O poster `hero-fundo.webp` saiu
     de um frame dele. É o fundo da seção; **não** é o que vai no arco.
 

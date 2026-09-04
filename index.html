@@ -339,7 +339,7 @@
       <p class="body body--tight">Desenhos autorais prontos, tatuados uma única vez. Quando alguém reserva, a arte sai daqui e não se repete.</p>
     </div>
 
-    <!-- CONFIRMAR: nome, tamanho e status (disponível/reservada) de cada arte.
+    <!-- CONFIRMAR: nome e tamanho de cada arte. Todas estao disponiveis.
          Os nomes "Arte 01…08" são provisórios e viram o nome real da peça. -->
     <p class="body body--tight nota-confirmar">[CONFIRMAR: nome, tamanho aproximado e status real de cada uma das artes abaixo]</p>
 
@@ -386,18 +386,18 @@
         <a class="btn btn--ghost btn--sm" data-wa data-arte="Arte 06" href="#">Reservar no WhatsApp</a>
       </article>
 
-      <article class="arte is-reservada">
-        <figure class="media media--flash" data-file="arte-07.webp"><img src="assets/img/arte-07.webp" alt="Desenho autoral já reservado: arte 07" width="900" height="900" loading="lazy" decoding="async"></figure>
-        <div class="arte__meta"><h3 class="arte__nome"><span class="rab-alvo">Arte 07<i class="rab rab--pos rab--rasura rab-10" aria-hidden="true"></i></span></h3><span class="badge">reservada</span></div>
+      <article class="arte">
+        <figure class="media media--flash" data-file="arte-07.webp"><img src="assets/img/arte-07.webp" alt="Desenho autoral disponível: arte 07" width="900" height="900" loading="lazy" decoding="async"></figure>
+        <div class="arte__meta"><h3 class="arte__nome">Arte 07</h3><span class="badge badge--on">disponível</span></div>
         <p class="micro">[CONFIRMAR] cm</p>
-        <span class="btn btn--ghost btn--sm is-disabled" aria-disabled="true">Reservada</span>
+        <a class="btn btn--ghost btn--sm" data-wa data-arte="Arte 07" href="#">Reservar no WhatsApp</a>
       </article>
 
-      <article class="arte is-reservada">
-        <figure class="media media--flash" data-file="arte-08.webp"><img src="assets/img/arte-08.webp" alt="Desenho autoral já reservado: arte 08" width="900" height="900" loading="lazy" decoding="async"></figure>
-        <div class="arte__meta"><h3 class="arte__nome"><span class="rab-alvo">Arte 08<i class="rab rab--pos rab--rasura rab-10" aria-hidden="true"></i></span></h3><span class="badge">reservada</span></div>
+      <article class="arte">
+        <figure class="media media--flash" data-file="arte-08.webp"><img src="assets/img/arte-08.webp" alt="Desenho autoral disponível: arte 08" width="900" height="900" loading="lazy" decoding="async"></figure>
+        <div class="arte__meta"><h3 class="arte__nome">Arte 08</h3><span class="badge badge--on">disponível</span></div>
         <p class="micro">[CONFIRMAR] cm</p>
-        <span class="btn btn--ghost btn--sm is-disabled" aria-disabled="true">Reservada</span>
+        <a class="btn btn--ghost btn--sm" data-wa data-arte="Arte 08" href="#">Reservar no WhatsApp</a>
       </article>
     </div>
   </div>
@@ -448,7 +448,9 @@
     <div>
       <p class="micro">biossegurança</p>
       <h2 class="h2 reveal" id="cuidados-title"><span class="line"><span>Segurança</span></span><span class="line"><span>e cuidado</span></span></h2>
+    </div>
 
+    <div class="cuidados__lista">
       <ul class="pontos">
         <li class="ponto"><span class="ponto__tick" aria-hidden="true"></span>Material 100% descartável, aberto na sua frente</li>
         <li class="ponto"><span class="ponto__tick" aria-hidden="true"></span>Um atendimento por vez, com a porta fechada</li>
@@ -459,51 +461,11 @@
       </ul>
     </div>
 
-    <div class="cuidados__acc">
-      <h3 class="h3">Depois da sessão</h3>
-      <div class="acc" data-accordion>
-        <div class="acc__item">
-          <h4><button class="acc__btn" type="button" aria-expanded="false" id="acc-1-b" aria-controls="acc-1-p">Primeiras 24 horas<span class="acc__ico" aria-hidden="true"></span></button></h4>
-          <!-- CONFIRMAR: protocolo da Eloize -->
-          <div class="acc__panel" id="acc-1-p" role="region" aria-labelledby="acc-1-b"><p class="body body--tight">[CONFIRMAR protocolo da Eloize]</p></div>
-        </div>
-        <div class="acc__item">
-          <h4><button class="acc__btn" type="button" aria-expanded="false" id="acc-2-b" aria-controls="acc-2-p">Como higienizar<span class="acc__ico" aria-hidden="true"></span></button></h4>
-          <div class="acc__panel" id="acc-2-p" role="region" aria-labelledby="acc-2-b"><p class="body body--tight">[CONFIRMAR]</p></div>
-        </div>
-        <div class="acc__item">
-          <h4><button class="acc__btn" type="button" aria-expanded="false" id="acc-3-b" aria-controls="acc-3-p">O que evitar<span class="acc__ico" aria-hidden="true"></span></button></h4>
-          <div class="acc__panel" id="acc-3-p" role="region" aria-labelledby="acc-3-b"><p class="body body--tight">Sol direto, mar, piscina, academia e coçar a região até a cura completa.</p></div>
-        </div>
-        <div class="acc__item">
-          <h4><button class="acc__btn" type="button" aria-expanded="false" id="acc-4-b" aria-controls="acc-4-p">Cicatrização e retoque<span class="acc__ico" aria-hidden="true"></span></button></h4>
-          <!-- CONFIRMAR: prazo de cicatrização e política de retoque -->
-          <div class="acc__panel" id="acc-4-p" role="region" aria-labelledby="acc-4-b"><p class="body body--tight">[CONFIRMAR prazo e política de retoque]</p></div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
 <!-- ==========================================================
-     12 · DEPOIMENTOS
-     ========================================================== -->
-<section class="section depos" data-theme="paper-deep" aria-labelledby="depos-title">
-  <img class="sticker stk--depos" src="assets/img/onda-1.png" alt="" aria-hidden="true" width="363" height="854" loading="lazy" decoding="async">
-  <div class="site-container">
-    <h2 class="sr-only" id="depos-title">Depoimentos de clientes</h2>
-    <!-- CONFIRMAR: substituir pelos três depoimentos reais das clientes -->
-    <p class="body body--tight nota-confirmar">[CONFIRMAR: substituir pelos três depoimentos reais das clientes]</p>
-
-    <blockquote class="depo"><p>[CONFIRMAR depoimento 1]</p><cite>[CONFIRMAR nome] · [CONFIRMAR local do corpo]</cite></blockquote>
-    <blockquote class="depo"><p>[CONFIRMAR depoimento 2]</p><cite>[CONFIRMAR nome] · [CONFIRMAR local do corpo]</cite></blockquote>
-    <blockquote class="depo"><p>[CONFIRMAR depoimento 3]</p><cite>[CONFIRMAR nome] · [CONFIRMAR local do corpo]</cite></blockquote>
-  </div>
-</section>
-
-<!-- ==========================================================
-     13 · FAQ
+     12 · FAQ
      ========================================================== -->
 <section class="section faq" id="faq" data-theme="paper" aria-labelledby="faq-title">
   <img class="sticker stk--faq" src="assets/img/olho-2.png" alt="" aria-hidden="true" width="229" height="229" loading="lazy" decoding="async">
@@ -553,7 +515,7 @@
 <div class="faixa-liquida full-bleed" role="presentation"></div>
 
 <!-- ==========================================================
-     14 · CTA FINAL
+     13 · CTA FINAL
      ========================================================== -->
 <section class="section cta" id="agendar" data-theme="ink" aria-labelledby="cta-title">
   <img class="sticker stk--cta" src="assets/img/olho-4.png" alt="" aria-hidden="true" width="226" height="227" loading="lazy" decoding="async">
@@ -574,7 +536,6 @@
       <ul class="cta__infos">
         <li class="micro">Atendimento com hora marcada</li>
         <li class="micro">Av. Ivo Jangada, 242 · Imbaú, PR</li>
-        <li class="micro">Somente com hora marcada</li>
       </ul>
     </div>
 
@@ -588,7 +549,7 @@
 </main>
 
 <!-- ==========================================================
-     15 · RODAPÉ
+     14 · RODAPÉ
      ========================================================== -->
 <footer class="footer" data-theme="ink">
   <div class="site-container">
@@ -606,8 +567,7 @@
       </div>
       <div class="footer__col">
         <p class="micro">estúdio</p>
-        <!-- CONFIRMAR: dias da semana em que atende -->
-        <ul><li>Estúdio Eloize Betim</li><li>Av. Ivo Jangada, 242 — Imbaú, PR</li><li>[CONFIRMAR dias de atendimento]</li></ul>
+        <ul><li>Estúdio Eloize Betim</li><li>Av. Ivo Jangada, 242 — Imbaú, PR</li><li>Somente com hora marcada</li></ul>
       </div>
     </div>
 
@@ -638,7 +598,8 @@
 </svg>
 
 <!-- Dados do perfil comercial dela no WhatsApp (Tattoo Elo).
-     CONFIRMAR: os dias da semana em que atende. -->
+     Sem openingHoursSpecification de proposito: o atendimento e por hora
+     marcada, nao por horario fixo de porta aberta. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
