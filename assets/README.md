@@ -23,7 +23,7 @@ Não precisa mexer no código.
 | `estilo-fineline.webp` | exemplo de fine line | 800×1100 |
 | `estilo-floral.webp` | exemplo de floral | 800×1100 |
 | `estilo-autoral.webp` | exemplo de arte autoral | 800×1100 |
-| fotos da galeria | ✅ **já feitas** — 17 fotos + 4 vídeos, 8 peças (ver abaixo) | mínimo 880px no lado maior |
+| fotos da galeria | ✅ **já feitas** — 18 fotos + 4 vídeos, 9 peças (ver abaixo) | mínimo 880px no lado maior |
 | `arte-01.webp` … `arte-08.webp` | desenhos disponíveis, fundo claro | 900×900 |
 | `cta-estudio.webp` | fachada ou detalhe do espaço, vertical | 1000×1400 |
 | `hero-fundo.mp4` | ✅ **já feito** — vídeo de fundo da seção do hero | 592×1206 |
@@ -44,6 +44,7 @@ no atributo `data-angulos` do botão, em JSON.
 | Ramo com peônia e libélula | `fineline` | 6 fotos | `ramo-1…6.webp` |
 | Peônias e borboletas | `florais` | 1 foto | `peonias-1.webp` |
 | Flores na clavícula | `florais` | 1 foto | `clavicula-1.webp` |
+| Everything happens for a reason | `fineline cicatrizadas` | 1 foto | `escrita-1.webp` |
 | Libélula e "Hope" | `autorais` | 3 fotos + 1 vídeo | `hope-1…3.webp`, `hope-video.mp4` |
 | Bússola com lírios | `autorais` | 1 foto | `bussola-1.webp` |
 | Polvo com flor | `autorais` | só vídeo | `polvo-video.mp4` + poster |
@@ -55,8 +56,10 @@ já está curada, então aparece nos dois filtros. As outras três categorias
 (florais, fineline, autorais) continuam se excluindo na prática, mas nada
 impede uma peça de estar em duas.
 
-Hoje só a manga de lírios está marcada como cicatrizada — foi a cliente
-quem confirmou. As outras cinco continuam sem essa marca porque ninguém
+Hoje duas peças estão marcadas como cicatrizadas — a manga de lírios e
+a frase na clavícula —, as duas confirmadas pela cliente. A frase também
+está como fine line: a cliente só disse que era cicatrizada, o estilo foi
+leitura minha do traço, e é uma palavra pra trocar se ela discordar. As outras cinco continuam sem essa marca porque ninguém
 disse que estão curadas, e eu não marco por conta própria. Se o filtro
 ficar sem nenhuma peça, ele mostra uma mensagem em vez de um vão mudo.
 
