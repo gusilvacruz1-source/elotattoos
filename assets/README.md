@@ -20,9 +20,9 @@ Não precisa mexer no código.
 |---|---|---|
 | `hero-eloize.webp` | ✅ **já feito** — retrato da Eloize, no arco do topo | 900×1200 |
 | `sobre-estudio.webp` | ambiente do estúdio | 1000×1250 |
-| `estilo-fineline.webp` | exemplo de fine line | 800×1100 |
-| `estilo-floral.webp` | exemplo de floral | 800×1100 |
-| `estilo-autoral.webp` | exemplo de arte autoral | 800×1100 |
+| `estilo-fineline.webp` | ✅ **já feito** — a frase na clavícula, recortada em 3:4 | 828×1104 |
+| `estilo-floral.webp` | **falta** — o card do meio é 2:3; o candidato óbvio é a `clavicula-1.webp` | 800×1200 |
+| `estilo-autoral.webp` | ✅ **já feito** — quadro do vídeo do polvo, em 4:5 | 464×580 |
 | fotos da galeria | ✅ **já feitas** — 18 fotos + 4 vídeos, 9 peças (ver abaixo) | mínimo 880px no lado maior |
 | `arte-01.webp` … `arte-08.webp` | desenhos disponíveis, fundo claro | 900×900 |
 | `cta-estudio.webp` | fachada ou detalhe do espaço, vertical | 1000×1400 |

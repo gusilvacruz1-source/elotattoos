@@ -89,9 +89,11 @@ propósito, para não passar batido. Nada foi inventado.
 16. ~~Retrato da Eloize~~ — ✅ **pronto.** `hero-eloize.webp`, 900×1200,
     45 KB, recortado da foto que a cliente mandou. É o que aparece dentro
     do arco do hero, por cima do vídeo.
-17. **Faltam 14 arquivos de imagem** — ver `assets/README.md`: as **8 artes
-    disponíveis**, as **3 fotos de estilo**, o **ambiente do estúdio**, a
-    **foto do CTA** e a **`og-image.jpg`**. A galeria tem **6 peças e 17
+17. **Faltam 12 arquivos de imagem** — ver `assets/README.md`: as **8 artes
+    disponíveis**, a **foto de estilo floral**, o **ambiente do estúdio**, a
+    **foto do CTA** e a **`og-image.jpg`**. Os cards de fine line e de
+    autorais da seção "Estilos" já estão preenchidos: a frase na clavícula
+    e um quadro do vídeo do polvo, escolhidos pela cliente. A galeria tem **6 peças e 17
     fotos + 4 vídeos**, em **9 peças**. O filtro "Cicatrizadas" já não
     está vazio: tem a manga de lírios e a frase na clavícula, as duas
     confirmadas pela cliente.
