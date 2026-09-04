@@ -23,7 +23,7 @@ Não precisa mexer no código.
 | `estilo-fineline.webp` | exemplo de fine line | 800×1100 |
 | `estilo-floral.webp` | exemplo de floral | 800×1100 |
 | `estilo-autoral.webp` | exemplo de arte autoral | 800×1100 |
-| fotos da galeria | ✅ **já feitas** — 17 fotos, 6 peças (ver abaixo) | mínimo 880px no lado maior |
+| fotos da galeria | ✅ **já feitas** — 17 fotos + 4 vídeos, 8 peças (ver abaixo) | mínimo 880px no lado maior |
 | `arte-01.webp` … `arte-08.webp` | desenhos disponíveis, fundo claro | 900×900 |
 | `cta-estudio.webp` | fachada ou detalhe do espaço, vertical | 1000×1400 |
 | `hero-fundo.mp4` | ✅ **já feito** — vídeo de fundo da seção do hero | 592×1206 |
@@ -46,6 +46,8 @@ no atributo `data-angulos` do botão, em JSON.
 | Flores na clavícula | `florais` | 1 foto | `clavicula-1.webp` |
 | Libélula e "Hope" | `autorais` | 3 fotos + 1 vídeo | `hope-1…3.webp`, `hope-video.mp4` |
 | Bússola com lírios | `autorais` | 1 foto | `bussola-1.webp` |
+| Polvo com flor | `autorais` | só vídeo | `polvo-video.mp4` + poster |
+| Galho florido no antebraço | `autorais` | só vídeo | `galho-video.mp4` + poster |
 
 **`data-cat` aceita mais de uma categoria, separadas por espaço.**
 "Cicatrizadas" é um estado, não um estilo: a manga de lírios é floral *e*
@@ -57,6 +59,12 @@ Hoje só a manga de lírios está marcada como cicatrizada — foi a cliente
 quem confirmou. As outras cinco continuam sem essa marca porque ninguém
 disse que estão curadas, e eu não marco por conta própria. Se o filtro
 ficar sem nenhuma peça, ele mostra uma mensagem em vez de um vão mudo.
+
+**Duas peças hoje existem só em vídeo** (o polvo e o galho no antebraço).
+A capa do cartão é um quadro do próprio vídeo, e o lightbox abre o vídeo
+direto, sem setas. Os dois chegaram pelo WhatsApp, então vieram pequenos —
+464×688 e 480×656. Dá pra ver, mas fica macio numa tela retina: **se a
+cliente mandar foto dessas duas peças, vale trocar a capa**.
 
 **Para acrescentar uma peça nova:** copie um `<button class="shot">`
 inteiro, troque `data-titulo`, `data-cat`, `data-ratio` (largura ÷ altura

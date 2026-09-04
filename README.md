@@ -92,9 +92,12 @@ propósito, para não passar batido. Nada foi inventado.
 17. **Faltam 14 arquivos de imagem** — ver `assets/README.md`: as **8 artes
     disponíveis**, as **3 fotos de estilo**, o **ambiente do estúdio**, a
     **foto do CTA** e a **`og-image.jpg`**. A galeria tem **6 peças e 17
-    fotos**; o que falta ali são **peças diferentes** — são 6 peças para
-    mais de 200 tatuagens. O filtro "Cicatrizadas" já não está vazio: a
-    cliente confirmou que a manga de lírios está curada.
+    fotos + 4 vídeos**, em **8 peças**. O filtro "Cicatrizadas" já não
+    está vazio: a cliente confirmou que a manga de lírios está curada.
+    Duas peças (o polvo e o galho no antebraço) existem só em vídeo, e
+    vieram comprimidas pelo WhatsApp — **foto dessas duas melhoraria a
+    capa dos cartões**. E 8 peças ainda é pouco para mais de 200
+    tatuagens.
 18. ~~Vídeo de fundo do hero~~ — ✅ **pronto.** `hero-fundo.mp4`, 717 KB,
     H.264, convertido do `.mov` do iPhone. O poster `hero-fundo.webp` saiu
     de um frame dele. É o fundo da seção; **não** é o que vai no arco.
