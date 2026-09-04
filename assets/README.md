@@ -257,3 +257,33 @@ histórico do Git para sempre. Se precisar deles de novo, peça à cliente.
 **Ainda não há nenhuma foto de "cicatrizadas".** Duas vagas estão marcadas
 com essa categoria esperando foto de trabalho já curado — não dá para usar
 foto de tatuagem recém-feita ali, seria informação errada para quem filtra.
+
+
+---
+
+## Galeria — o que ainda falta, e por quê
+
+10 das 12 vagas estão preenchidas com foto real. As duas que sobram não são
+"qualquer foto": cada uma tem um motivo.
+
+**`galeria-03` — categoria "cicatrizadas".** Nenhuma das fotos enviadas até
+agora é de trabalho curado; são todas de tatuagem recém-feita. Pôr uma
+delas aqui seria mentira para quem clica no filtro "Cicatrizadas"
+esperando ver como a peça fica depois da cura. Precisa de foto de um
+trabalho com semanas ou meses.
+
+**`galeria-11` — categoria "autorais".** As duas fotos autorais recebidas
+são da mesma peça (a libélula com "Hope"), de ângulos diferentes. Falta uma
+peça autoral **diferente**.
+
+### Uma observação sobre variedade
+
+Das 10 fotos no ar, várias são da **mesma tatuagem** vista de ângulos
+diferentes: a manga de lírios aparece em 5 vagas (`01`, `04`, `08`, `10`,
+`12`) e a libélula com "Hope" em 2 (`09`, `07`). Espalhei entre as três
+colunas para não ficarem lado a lado, mas na prática a galeria mostra
+cerca de **4 peças distintas**, não 10.
+
+Para um portfólio de quem já fez mais de 200 tatuagens, vale pedir fotos de
+**trabalhos diferentes** em vez de mais ângulos dos mesmos — é o que faz a
+galeria parecer o tamanho real do trabalho dela.
